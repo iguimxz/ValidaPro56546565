@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ValidaPro – controle de validade</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="auth" class="hide">
+ <div class="box">
+  <h1 class="brand">Valida<span>Pro</span></h1>
+  <p class="sub">Saiba o que vence antes de perder dinheiro.</p>
+  <div class="tabs"><button id="tL" class="on" type="button">Entrar</button><button id="tR" type="button">Criar conta</button></div>
+  <div id="fL">
+   <label for="le">E-mail</label><input id="le" type="email" autocomplete="email" placeholder="voce@loja.com">
+   <label for="lp">Senha</label><input id="lp" type="password" autocomplete="current-password">
+   <div class="err" id="eL"></div>
+   <button class="btn" style="width:100%" id="bL" type="button">Entrar</button>
+  </div>
+  <div id="fR" class="hide">
+   <label for="rn">Seu nome</label><input id="rn" autocomplete="name">
+   <label for="rc">Nome da loja ou comércio</label><input id="rc" placeholder="Ex.: Mercadinho Boa Compra">
+   <label for="re">E-mail</label><input id="re" type="email" autocomplete="email">
+   <div class="row"><div><label for="rp">Senha</label><input id="rp" type="password" autocomplete="new-password"></div><div><label for="rp2">Repita a senha</label><input id="rp2" type="password" autocomplete="new-password"></div></div>
+   <div class="err" id="eR"></div>
+   <button class="btn" style="width:100%" id="bR" type="button">Criar conta e entrar</button>
+  </div>
+ </div>
+</section>
+
+<section id="app" class="hide">
+ <header><div class="wrap">
+  <div class="logo" id="hLogo"></div>
+  <div class="who"><b id="hStore"></b><small id="hUser"></small></div>
+  <button class="btn ghost sm hide" id="bAdm" type="button">Admin</button>
+  <button class="btn ghost sm" id="bProf" type="button">Perfil</button>
+  <button class="btn ghost sm" id="bOut" type="button">Sair</button>
+ </div></header>
+ <main class="wrap">
+  <div class="banner hide" id="banner"></div>
+  <div class="stats" id="stats"></div>
+  <div class="bar">
+   <input id="q" type="search" placeholder="Buscar produto, sabor, lote ou distribuidor">
+   <button class="btn" id="bAdd" type="button">+ Cadastrar produto</button>
+  </div>
+  <div class="list" id="list"></div>
+ </main>
+</section>
+
+<div id="modalHost"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
